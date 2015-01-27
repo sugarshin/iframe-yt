@@ -1,0 +1,14 @@
+{
+  "name": "youtube.js",
+  "version": "0.0.1",
+  "description": "YouTube",
+  "main": "youtube.js",
+  "scripts": {
+    "start": "node ./node_modules/.bin/coffee -c -w youtube.coffee"
+  },
+  "author": "sugarshin",
+  "license": "MIT",
+  "devDependencies": {
+    "coffee-script": "^1.8.0"
+  }
+}
