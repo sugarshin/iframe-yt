@@ -26,7 +26,7 @@ youtube.create().then(player => {
 });
 ```
 
-Promise is required
+**Promise is required**
 
 ## Contributing
 
