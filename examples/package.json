@@ -16,6 +16,6 @@
     "watchify": "^3.4.0"
   },
   "dependencies": {
-    "youtube-thin-wrapper": "file:../"
+    "youtube-thin-wrapper": "file:///Users/shingosato/repo/youtube-thin-wrapper"
   }
 }

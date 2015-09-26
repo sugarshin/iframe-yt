@@ -6,7 +6,7 @@ document.body.appendChild(div);
 
 YouTube.autoLoadYouTubeAPI();
 
-const youtube = new YouTube(div, {
+const youtube = new YouTube('yt', {
   videoId: 'j6LY4BDfGGM'
 });
 youtube.create().then(player => {
