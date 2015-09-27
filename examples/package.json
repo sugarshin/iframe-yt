@@ -2,20 +2,17 @@
   "name": "examples",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "budo index.js --live -v -- -t babelify | opnr | garnish"
+    "start": "budo index.js -ol -- -t [ babelify --stage 0 ] | garnish"
   },
   "author": "",
   "license": "MIT",
-  "devDependencies": {
-    "babelify": "^6.3.0",
-    "budo": "^4.2.2",
-    "garnish": "^3.2.1",
-    "opnr": "^1.0.4",
-    "watchify": "^3.4.0"
-  },
   "dependencies": {
     "youtube-thin-wrapper": "file:../"
+  },
+  "devDependencies": {
+    "babelify": "^6.3.0",
+    "budo": "^5.1.0",
+    "garnish": "^3.2.1"
   }
 }
