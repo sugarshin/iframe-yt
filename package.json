@@ -1,6 +1,6 @@
 {
   "name": "youtube-thin-wrapper",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a YouTube iframe API thinness wrapper",
   "repository": {
     "type": "git",
