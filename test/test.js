@@ -1,7 +1,7 @@
 import { jsdom } from 'jsdom';
 import assert from 'power-assert';
 
-import YouTube, { youtubeIframeAPIReady } from '../';
+import YouTube, { _youtubeIframeAPIReady } from '../';
 
 const document = jsdom('<html><head><script></script></head><body></body></html>');
 global.window = document.defaultView;
@@ -11,7 +11,7 @@ describe('YouTube', () => {
   describe('static autoLoadYouTubeAPI', () => {
     it('case 1', () => {
       YouTube.autoLoadYouTubeAPI();
-      return youtubeIframeAPIReady.then(() => {
+      return _youtubeIframeAPIReady.then(() => {
         assert(true);
       });
     });

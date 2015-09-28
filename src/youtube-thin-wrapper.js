@@ -8,16 +8,12 @@
 
 import deepExtend from 'deep-extend';
 
-export let youtubeIframeAPIReady = null;
+export let _youtubeIframeAPIReady = null;
 
 export default class YouTube {
 
   static autoLoadYouTubeAPI() {
-    if (window.YT) {
-      youtubeIframeAPIReady = Promise.resolve();
-      return;
-    }
-    youtubeIframeAPIReady = new Promise(resolve => {
+    _youtubeIframeAPIReady = new Promise(resolve => {
       window.onYouTubeIframeAPIReady = () => { resolve(); };
 
       const script = window.document.createElement('script');
@@ -29,7 +25,7 @@ export default class YouTube {
 
   constructor(id, opts) {
     this.id = id;
-    this.opts = deepExtend({}, {
+    this.opts = deepExtend({
       width: 640,
       height: 390,
       videoId: '',
@@ -41,13 +37,9 @@ export default class YouTube {
   }
 
   create() {
-    if (!youtubeIframeAPIReady) {
-      throw Error('YouTube iframe API is not loaded.')
-    }
-
     return new Promise(resolve => {
-      youtubeIframeAPIReady.then(() => {
-        const player = new window.YT.Player(this.id, deepExtend({}, this.opts, {
+      _youtubeIframeAPIReady.then(() => {
+        const player = this.player = new window.YT.Player(this.id, deepExtend({}, this.opts, {
           events: {
             onReady() {
               resolve(player);

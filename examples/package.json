@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "budo index.js -ol -- -t [ babelify --stage 0 ] | garnish"
+    "start": "budo index.js -ol -- -t babelify | garnish"
   },
   "author": "",
   "license": "MIT",

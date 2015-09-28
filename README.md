@@ -19,7 +19,7 @@ import YouTube from 'youtube-thin-wrapper';
 
 YouTube.autoLoadYouTubeAPI();
 
-const youtube = new YouTube(el, opts);
+const youtube = new YouTube(id, opts);
 youtube.create().then(player => {
   player.playVideo();
   // Can use other api methods and more...

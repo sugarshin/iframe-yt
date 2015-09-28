@@ -1,3 +1,4 @@
+import 'babelify/polyfill';
 import YouTube from 'youtube-thin-wrapper';
 
 const div = document.createElement('div');
@@ -9,6 +10,8 @@ YouTube.autoLoadYouTubeAPI();
 const youtube = new YouTube('yt', {
   videoId: 'j6LY4BDfGGM'
 });
-youtube.create().then(player => {
+
+(async function() {
+  const player = await youtube.create();
   player.playVideo();
-});
+})();

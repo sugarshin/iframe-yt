@@ -23,8 +23,8 @@
     "lint": "eslint src",
     "start": "npm run compile -- -w",
     "test": "mocha --timeout 3000 --compilers js:espower-babel/guess test/**/*.js",
-    "compile": "babel --stage 0 -d lib src",
-    "build": "npm run lint && npm run test && npm run compile"
+    "compile": "babel -d lib src",
+    "build": "npm run lint &&  npm run compile && npm run test"
   },
   "engines": {
     "node": "4.1.x"
